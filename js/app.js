@@ -84,24 +84,24 @@ function shuffleImages(images) {
 }
 
 
-function recordImageClick() {
-  for (var index = 0; index < images.length -1; index++) {
-    if (event.target.src =
+function recordImageClick(image) {
+//  for (var index = 0; index < images.length -1; index++) {
+  //  if (event.target.src ==
 
     //  compare src to the file name in array
     //start by writing out what i want the code to do {
     //break it down into as amany steps as possible
     //be as speficic as possible
 
-    } while (true);
-  }
+//    } while (true);
+  //}
 
 
   console.log(event.target.src); //file name ---loop through images array compare the images that was clicked to file name once one matches, update it in the array
   counter++;
-  event.target.src.totalVotes++;
+//  event.target.src.totalVotes++;
   console.log(images[0].totalVotes);
-  event.target.src++;
+  //event.target.src++;
   console.log("this is the total image clicked", counter);
   addImages();
 }
