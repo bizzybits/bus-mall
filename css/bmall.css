@@ -10,3 +10,18 @@
   box-shadow: 0 0 15px; #7777FF;
   cursor: pointer;
 }
+
+h1 {
+  font-family: arial;
+  text-align: center;
+}
+
+h2 {
+  font-family: arial;
+  text-align: center;
+}
+
+
+legend, p {
+  text-align: center;
+}

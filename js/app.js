@@ -3,6 +3,8 @@ var BusMallImage = function(fileName) {
   this.totalVotes = 0;
 }
 
+var counter = 0;
+
 var images = [];
 images.push(new BusMallImage('bag.jpg'));
 images.push(new BusMallImage('banana.jpg'));
@@ -18,6 +20,7 @@ images.push(new BusMallImage('unicorn.jpg'));
 images.push(new BusMallImage('usb.jpg'));
 images.push(new BusMallImage('water_can.jpg'));
 images.push(new BusMallImage('wine_glass.jpg'));
+
 
 //var arrayUnique = function (images) {
 //	return arr.filter(function(item, images){
@@ -77,13 +80,49 @@ function shuffleImages(images) {
     images[index] = images[randomIndex];
     images[randomIndex] = bucket;
   }
-  return images;
+    return images;
 }
 
 
-function recordImageClick(event) {
-  console.log(event.target.src);
+function recordImageClick() {
+  for (var index = 0; index < images.length -1; index++) {
+    if (event.target.src =
+
+    //  compare src to the file name in array
+    //start by writing out what i want the code to do {
+    //break it down into as amany steps as possible
+    //be as speficic as possible
+
+    } while (true);
+  }
+
+
+  console.log(event.target.src); //file name ---loop through images array compare the images that was clicked to file name once one matches, update it in the array
+  counter++;
+  event.target.src.totalVotes++;
+  console.log(images[0].totalVotes);
+  event.target.src++;
+  console.log("this is the total image clicked", counter);
   addImages();
 }
 
+
+
+//function clickListener(images){
+//  var clickedImage=(window.event)
+//      tags=images.getElementsByTagName(clickedImage.tagName);
+//  for(var index = 0; index <tags.length; index++){
+//      if(tags[index]==clickedImage){
+//        images.push({tag:clickedImage.tagName});
+//        console.log(images);
+//        clickListener();
+//      }
+//    }
+//}
+
+
+//i want to count the clicks on all the addImages--create counter for
+
+
+//images.onclick = clickListener;
 window.addEventListener('load', addImages);
