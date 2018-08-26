@@ -52,9 +52,7 @@ function addImages() {
   container.innerText = '';
   var image = document.createElement('img');
   var index = generateRandom(0, images.length);
-  console.log(index);
   image.setAttribute('src', 'img/'+images[0].fileName);
-  console.log(image);
   image.addEventListener('click', recordImageClick);
   container.appendChild(image);
   image = document.createElement('img');
@@ -84,9 +82,17 @@ function shuffleImages(images) {
 }
 
 
-function recordImageClick(image) {
-//  for (var index = 0; index < images.length -1; index++) {
-  //  if (event.target.src ==
+function recordImageClick(event) {
+ for (var index = 0; index < images.length; index++) {
+   if (event.target.attributes[0].value == 'img/'+ images[index].fileName) {
+    images[index].totalVotes++
+    console.log(images[index].totalVotes);
+    console.log(images[index].fileName);
+  }
+    counter++;
+  }
+  addImages();
+}
 
     //  compare src to the file name in array
     //start by writing out what i want the code to do {
@@ -97,14 +103,12 @@ function recordImageClick(image) {
   //}
 
 
-  console.log(event.target.src); //file name ---loop through images array compare the images that was clicked to file name once one matches, update it in the array
-  counter++;
+  //console.log(event.target.src); //file name ---loop through images array compare the images that was clicked to file name once one matches, update it in the array
 //  event.target.src.totalVotes++;
-  console.log(images[0].totalVotes);
+//  console.log(images[0].totalVotes);
   //event.target.src++;
-  console.log("this is the total image clicked", counter);
-  addImages();
-}
+//  console.log("this is the total image clicked", counter);
+
 
 
 
