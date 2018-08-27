@@ -21,7 +21,20 @@ h2 {
   text-align: center;
 }
 
+#progress-container {
+box-shadow: 0 0 4px aqua;
+border-radius: 13px;
+position: relative;
+height: 26px;
+}
 
-legend, p {
-  text-align: center;
+#progress-bar {
+border-radius: 13px;
+height: 26px;
+width: 0;
+background-color: aqua;
+position: absolute;
+top: -1px;
+right: 0;
+z-index: -1;
 }
