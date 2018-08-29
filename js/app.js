@@ -79,16 +79,19 @@ function addResults() {
     listItem.innerText = images[index].label + '     ' + images[index].y;
     resultsList.appendChild(listItem);
   }
-
+    var buttonContainer = document.getElementById('button-container');
+    var button = document.createElement('button');
+    button.setAttribute('onclick', 'location.reload()');
+    buttonContainer.appendChild(button);
   ///create element input html
   ///set two attributes type and value (words)
   //appended button to div or whatever
   //
-  container.appendChild(resultsList);
-  var btn = document.createElement('button');
-  var text = document.createTextNode('Reset Game');
-  btn.appendChild(text);
-  document.body.appendChild(btn);
+  // container.appendChild(resultsList);
+  // var btn = document.createElement('button');
+  // var text = document.createTextNode('Reset Game');
+  // btn.appendChild(text);
+  // document.body.appendChild(btn);
   // location.reload();
 }
 
@@ -120,9 +123,21 @@ function recordImageClick(event) {
     addResults();
     buildChart();
     localStorage.setItem('JSONImagesArray', JSON.stringify(images));
-  }
+    }
   addImages();
-}
+  }
+
+
+ //function clearResults() {
+//  var buttonContainer = document.getElementById("button-container");
+  //var button = document.createElement('input');
+  //button.setAttribute('type', 'button');
+  //button.setAttribute('onClick', location.reload())
+  // button.innerText = 'Start Again';
+  // buttonContainer.appendChild(button);
+//  button.onclick = clearResults()
+  //  location.reload();
+
 
 
 
@@ -162,4 +177,5 @@ function recordImageClick(event) {
 
 //images.onclick = clickListener;
 window.addEventListener('load', addImages)
+
 // window.addEventListener('load', buildChart);
