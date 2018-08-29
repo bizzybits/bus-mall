@@ -89,7 +89,7 @@ function addResults() {
   var text = document.createTextNode('Reset Game');
   btn.appendChild(text);
   document.body.appendChild(btn);
-  //location.reload();
+  // location.reload();
 }
 
 function generateRandom(min,max) {
@@ -119,6 +119,7 @@ function recordImageClick(event) {
     console.log(counter);
     addResults();
     buildChart();
+    localStorage.setItem('JSONImagesArray', JSON.stringify(images));
   }
   addImages();
 }
