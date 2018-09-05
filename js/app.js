@@ -22,31 +22,6 @@ images.push(new BusMallImage('usb.jpg'));
 images.push(new BusMallImage('water_can.jpg'));
 images.push(new BusMallImage('wine_glass.jpg'));
 
-
-//var arrayUnique = function (images) {
-//	return arr.filter(function(item, images){
-//		return arr.indexOf(item) >= index;
-//	});
-//};
-//removes duplicates in an array---but there are no duplicates, just duplicate instances when clicking
-
-
-//function shuffle(array) {
-  //var copy = [], n = array.length, i;
-
-  // While there remain elements to shuffle…
-//  while (n) {
-
-    // Pick a remaining element…
-  //  i = Math.floor(Math.random() * n--);
-
-    // And move it to the new array.
-  //  copy.push(array.splice(i, 1)[0]);
-//  }
-
-  //return copy;
-//};
-
 function addImages() {
   var container = document.getElementById('image-container');
   shuffleImages(images);
@@ -123,59 +98,17 @@ function recordImageClick(event) {
     addResults();
     buildChart();
     localStorage.setItem('JSONImagesArray', JSON.stringify(images));
+  }
+    var imagesToHide = document.getElementById('image-container').getElementsByTagName('img');
+  for(var index = 0; index < imagesToHide.length; index++){
+    imagesToHide.item(index).style.animation = '0.5s imageByeBye';
     }
-  addImages();
+    setTimeout(addImages(), 500);
+    // addImages();
   }
 
-
- //function clearResults() {
-//  var buttonContainer = document.getElementById("button-container");
-  //var button = document.createElement('input');
-  //button.setAttribute('type', 'button');
-  //button.setAttribute('onClick', location.reload())
-  // button.innerText = 'Start Again';
-  // buttonContainer.appendChild(button);
-//  button.onclick = clearResults()
-  //  location.reload();
+//  addImages();
 
 
 
-
-    //  compare src to the file name in array
-    //start by writing out what i want the code to do {
-    //break it down into as amany steps as possible
-    //be as speficic as possible
-
-//    } while (true);
-  //}
-
-
-  //console.log(event.target.src); //file name ---loop through images array compare the images that was clicked to file name once one matches, update it in the array
-//  event.target.src.totalVotes++;
-//  console.log(images[0].totalVotes);
-  //event.target.src++;
-//  console.log("this is the total image clicked", counter);
-
-
-
-
-//function clickListener(images){
-//  var clickedImage=(window.event)
-//      tags=images.getElementsByTagName(clickedImage.tagName);
-//  for(var index = 0; index <tags.length; index++){
-//      if(tags[index]==clickedImage){
-//        images.push({tag:clickedImage.tagName});
-//        console.log(images);
-//        clickListener();
-//      }
-//    }
-//}
-
-
-//i want to count the clicks on all the addImages--create counter for
-
-
-//images.onclick = clickListener;
 window.addEventListener('load', addImages)
-
-// window.addEventListener('load', buildChart);

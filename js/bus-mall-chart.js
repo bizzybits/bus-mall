@@ -6,7 +6,7 @@ function buildChart() {
 		},
 		data: [
 		{
-			type: "bar",
+			type: "column",
 			dataPoints: images,
 		}
 		]
