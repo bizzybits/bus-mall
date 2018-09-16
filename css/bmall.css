@@ -12,6 +12,11 @@
   transition: all 0.25s;
 }
 
+#image-container img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
 h1 {
   font-family: arial;
   text-align: center;
